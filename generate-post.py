@@ -6,12 +6,12 @@ import re
 from openai import OpenAI
 from PIL import Image, ImageDraw, ImageFont
 from colorthief import ColorThief
+from dotenv import load_dotenv
 
-
-key="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"
+load_dotenv()
 
 client = OpenAI(
-    api_key=key, 
+    api_key=os.getenv("API_KEY"), 
 )
 
 output_directory = r"C:\Users\tiger\OneDrive\Documents\coding projects\postGenerator\output"
